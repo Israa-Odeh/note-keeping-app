@@ -1,0 +1,15 @@
+{
+  "name": "note-keeping-app",
+  "version": "1.0.0",
+  "description": "This project is a simple Note Keeping Application built with Node.js, Express.js, and MongoDB. It provides a RESTful API that allows users to create, read, update, and delete notes efficiently. Each note consists of a title, content, and a creation date. The API also supports searching notes by title or content and includes pagination for retrieving notes in manageable sets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
