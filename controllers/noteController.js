@@ -20,7 +20,7 @@ exports.getAllNotes = async (req, res) => {
 
         res.status(200).json({
             totalNotes,
-            totalPages: Math.ceil(totalNotes / (limit || totalNotes)),
+            totalPages: limit ? Math.ceil(totalNotes / limit) : 1,
             currentPage: page || 1,
             notes,
         });
@@ -72,7 +72,7 @@ exports.updateNote = async (req, res) => {
 }
 
 exports.searchNotes = async (req, res) => {
-    const query = req.query.query || '';
+    const { query } = req.query ?? {};
     try {
         const notes = await Note.find({
             $or: [
