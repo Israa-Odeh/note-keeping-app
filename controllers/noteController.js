@@ -21,7 +21,7 @@ exports.getAllNotes = async (req, res) => {
         res.status(200).json({
             totalNotes,
             totalPages: limit ? Math.ceil(totalNotes / limit) : 1,
-            currentPage: page || 1,
+            currentPage: limit ? page || 1 : 1,
             notes,
         });
     } catch (error) {
